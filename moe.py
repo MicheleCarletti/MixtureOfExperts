@@ -100,7 +100,7 @@ def evaluate(model, dataloader, criterion, device):
     return total_loss / len(dataloader.dataset), correct / len(dataloader.dataset)
 
 # --- Visualize routing path ---
-def visualize_gating(model, dataloader, device, num_samples=32, cols=4):
+def visualize_gating(model, dataloader, device, num_samples=20, cols=5):
     model.eval()
     x_batch, y_batch = next(iter(dataloader))
     x_batch = x_batch[:num_samples].to(device)
